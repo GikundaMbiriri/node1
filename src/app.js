@@ -21,7 +21,7 @@ app.use(express.static(public));
 app.get('',(req,res)=>{
     res.render('index',{
         title:'Weather App',
-        name:'Peter'
+        name:'MGikunda'
     })
 })
 app.get('/about',(req,res)=>{
