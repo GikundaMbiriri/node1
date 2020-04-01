@@ -5,7 +5,7 @@ const forecast=require('./utils/forecast')
 const path=require('path')
 const express=require('express')
 const hbs=require('hbs');
-const port =process.env.PORT;
+const port =process.env.PORT || 3000;
 const app=express()
 //define paths for express config
 const public=path.join(__dirname,'../public');
