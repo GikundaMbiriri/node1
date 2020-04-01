@@ -5,7 +5,7 @@ const forecast=require('./utils/forecast')
 const path=require('path')
 const express=require('express')
 const hbs=require('hbs');
-
+const port =process.env.PORT;
 const app=express()
 //define paths for express config
 const public=path.join(__dirname,'../public');
@@ -85,6 +85,6 @@ app.get('/help/*',(req,res)=>{
 app.get('*',(req,res)=>{
     res.render('404',{title:'error message',name:'MGikunda',errorMessage:'we did not find that article'} );
 })
-app.listen(3000,()=>{
-    console.log('we are live on port 3000');
+app.listen(port,()=>{
+    console.log('we are live on port '+port);
 })
